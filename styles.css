@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -559,147 +560,168 @@ header {
         width: 80%;
     }
 
-}
 
-/* ============================= */
-/* ====== TABLET RESPONSIVE ===== */
-/* ============================= */
-@media (max-width: 992px) {
-
-    /* Container header lebih fleksibel */
-    header .container {
-        justify-content: space-between;
-    }
-
-    /* Logo lebih kecil */
-    .logo img {
-        width: 60px;
-        height: auto;
-    }
-
-    .in-logo h1 {
-        font-size: 18px;
-    }
-
-    .in-logo p {
-        font-size: 12px;
-    }
-
-    /* Navigation tetap horizontal tapi lebih rapat */
-    .under {
-        width: auto;
+    /* ===== ABOUT ===== */
+    #about {
+        grid-template-columns: 1fr;
+        /* jadi 1 kolom */
+        text-align: center;
         gap: 15px;
-        justify-content: flex-end;
-        flex-wrap: wrap;
     }
 
-    .under li {
-        margin: 0;
+    #about h2 {
+        font-size: 1.6rem;
     }
 
-    .under li a {
+    #about p {
         font-size: 14px;
     }
 
-    /* Tombol Order lebih kecil */
-    .under .button {
-        padding: 6px 12px;
-        border-radius: 4px;
-    }
-
-    .under .button a {
-        font-size: 13px;
-    }
-
-    /* Burger tetap disembunyikan di tablet */
-    .burger {
-        display: none;
+    #about img {
+        max-width: 90%;
+        margin: 0 auto;
     }
 
 
-    /* About */
-    #about {
-        gap: 30px;
-    }
-
-    /* Menu */
+    /* ===== MENU ===== */
     .menu-items {
-        gap: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* 2 kolom di HP */
+        gap: 15px;
     }
 
     .menu-item {
-        width: 45%;
+        width: 100%;
+        padding: 12px;
     }
 
-    /* Contact */
-    #contact {
-        width: 80%;
-        padding: 70px 15px;
+    .menu-item h3 {
+        font-size: 1rem;
+    }
+
+    .menu-item p,
+    .menu-item .description {
+        font-size: 13px;
+    }
+
+    .menu-item .price,
+    .menu-item span {
+        font-size: 14px;
+    }
+
+    .menu-item a {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+
+    /* ===== CONTACT ===== */
+    .contact-section {
+        padding: 50px 15px;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        /* jadi 1 kolom */
+        gap: 30px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.6rem;
         text-align: center;
     }
 
-    .contact-info {
-        padding: 0 20px;
+    .contact-info p {
+        font-size: 14px;
+        text-align: center;
     }
 
-    /* Footer */
+    .info-item {
+        text-align: center;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+
+    /* ===== FOOTER ===== */
     .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        /* 2 kolom biar gak kepanjangan */
+        gap: 25px;
         text-align: center;
+    }
+
+    .footer h2,
+    .footer h3 {
+        font-size: 1rem;
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        margin: 5px;
+        padding: 6px 8px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding: 15px 5px;
     }
 }
 
+/* ================= TABLET (481px–768px) ================= */
+@media (min-width: 481px) and (max-width: 768px) {
 
-/* ============================= */
-/* ====== MOBILE RESPONSIVE ===== */
-/* ============================= */
-@media (max-width: 576px) {
-
-
-    /* HOME */
-    #home .title-home {
-        text-align: center;
+    /* ===== ABOUT ===== */
+    #about {
+        grid-template-columns: 1fr 1fr;
+        /* tetap 2 kolom tapi lebih rapat */
+        gap: 25px;
         align-items: center;
     }
 
-    #home .title-home h2 {
-        font-size: 1.6rem;
+    #about h2 {
+        font-size: 1.8rem;
     }
 
-    #home .title-home p {
-        font-size: 15px;
+    #about p {
+        font-size: 16px;
     }
 
-    #home .img-home img {
-        width: 90%;
+    #about img {
+        width: 100%;
+        border-radius: 12px;
     }
 
-    /* BRAND */
-    .brand-logos {
-        gap: 20px;
-    }
 
-    .brand-logo img {
-        width: 110px;
-    }
-
-    /* ABOUT */
-    #about {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    /* MENU */
-    /* MENU GRID 2 KOLOM DI HP */
+    /* ===== MENU ===== */
     .menu-items {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 kartu per baris */
+        gap: 20px;
     }
 
     .menu-item {
@@ -708,37 +730,71 @@ header {
     }
 
     .menu-item h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
-    .menu-item p {
-        font-size: 13px;
-    }
-
-    .menu-item .price {
+    .menu-item p,
+    .menu-item .description {
         font-size: 14px;
     }
 
+    .menu-item .price,
+    .menu-item span {
+        font-size: 16px;
+    }
 
-    /* CONTACT */
+
+    /* ===== CONTACT ===== */
     .contact-section {
-        padding: 60px 15px;
+        padding: 70px 25px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        /* kembali 2 kolom */
+        gap: 40px;
+    }
+
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+
+    .contact-info p {
+        font-size: 15px;
     }
 
     .contact-form {
-        padding: 25px;
+        padding: 30px;
     }
 
-    /* FOOTER */
+    .form-title {
+        font-size: 1.3rem;
+    }
+
+
+    /* ===== FOOTER ===== */
     .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolom biar rapi */
+        gap: 30px;
+        text-align: left;
+    }
+
+    .footer h2,
+    .footer h3 {
+        font-size: 1.1rem;
+    }
+
+    .footer p,
+    .footer a {
+        font-size: 13px;
     }
 
     .social-icons a {
-        margin-bottom: 8px;
+        padding: 6px 10px;
+    }
+
+    .footer-bottom {
+        font-size: 13px;
     }
 }
-
-
-/* END OFF RESPONSIVE DESAIN */
